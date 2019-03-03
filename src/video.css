@@ -1,0 +1,213 @@
+.videoPlayerOuterContainer * {
+  box-sizing: border-box;
+  font-family: sans-serif, verdana;
+}
+
+.videoPlayerOuterContainer {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display: table;
+}
+
+.videoPlayerContainer {
+  width: 100%;
+  display: table-row;
+}
+
+.videoCenterControlsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.videoPlayControllerContainer {
+  position: absolute;
+  bottom: 15px;
+  width: 95%;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,.5);
+  border-radius: 5px;
+  left: 50%;
+  margin-left: -47.5%;
+}
+
+.videoPlayButton {
+  height: 75px;
+  width: 75px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 50%;
+  background: rgba(0,0,0,.5);
+  cursor: pointer;
+}
+
+.videoHide {
+  opacity: 0;
+  animation: dansvideoplayer-fade-out 0.5s ease;
+}
+
+.videoShow {
+  opacity: 1;
+  animation: dansvideoplayer-fade-in 0.5s ease;
+}
+
+.videoBoldText {
+  color: #444;
+}
+
+.videoLoader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -15px;
+  margin-top: -15px;
+}
+
+.videoSkipContainer {
+  background: rgba(0,0,0,.5);
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.videoSkipLeft {
+  margin-right: 10px;
+}
+
+.videoSkipRight {
+  margin-left: 10px;
+}
+
+.videoSkipImage {
+  width: 100%;
+  height: 100%;
+}
+
+.videoTime {
+  color: white;
+  margin-right: 15px;
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+.videoAudioContainer {
+  background: rgba(0,0,0,.5);
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  position: absolute;
+  z-index: 999;
+  top: 15px;
+  right: 15px;
+  min-width: 50px;
+  min-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoAudioIcon{
+  color: white;
+  font-size: 20px;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.videoAudioVolumebarContainer {
+  width: 80px;
+  height: 3px;
+  background: #ccc;
+  margin-left: 10px;
+  position: relative;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.videoAudioThumb {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgb(0, 125, 255);
+  position: absolute;
+  margin-top: -5px;
+  margin-left: -5px;
+  cursor: pointer;
+  top: 50%;
+}
+
+.videoFullscreenButtonContainer {
+  background: rgba(0,0,0,.5);
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  position: absolute;
+  z-index: 999;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.videoFullscreenButton {
+  color: white;
+  font-size: 20px;
+}
+
+.videoErrorContainer {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoErrormessage {
+  text-align: center;
+  font-size: 1em;
+}
+
+.videoLoaderCircle {
+  border-style: solid;
+  border-left-color: transparent;
+  border-radius: 50%;
+  animation: dansvideoplayer-spin 1s ease-in-out 0s infinite normal none running;
+}
+
+@keyframes dansvideoplayer-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes dansvideoplayer-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes dansvideoplayer-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

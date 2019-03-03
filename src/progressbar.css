@@ -1,0 +1,44 @@
+.progressBar {
+  flex: 1;
+  background: rgb(58, 61, 80);
+  height: 4px;
+  position: relative;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.progressButtonContainer {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  margin-top: -7.5px;
+  margin-left: -7.5px;
+  display: block;
+  background: rgb(0, 125, 255);
+  border-radius: 50%;
+  top: 50%;
+}
+
+.progressButtonPadding {
+  display: block;
+  padding: 0px 30px 30px 30px; 
+  left: 50%;
+  margin-left: -30px;
+  position: absolute;
+}
+
+.progressBarLoadedData {
+  background: #ccc;
+  height: 4px;
+  position: absolute;
+  border-radius: 5px;
+  left: 0;
+}
+
+.progressBarPlayedData {
+  background: rgb(0, 125, 255);
+  height: 4px;
+  position: absolute;
+  border-radius: 5px;
+  left: 0;
+}

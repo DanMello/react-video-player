@@ -1,11 +1,39 @@
 {
-  "name": "videoplayer",
+  "name": "React-Video-Player",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "A custom video player for react.",
+  "main": "dist/main.bundle.js",
+  "peerDependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
   },
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "react-icons": "^3.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open --hot --mode=development --env.development",
+    "build": "webpack --mode=production --env.production"
+  },
+  "author": {
+    "name": "Dan Mello",
+    "email": "jdanmello@gmail.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "css-loader": "^0.28.11",
+    "file-loader": "^2.0.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "^2.1.2",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  }
 }
