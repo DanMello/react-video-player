@@ -10,7 +10,7 @@ import { IoMdQrScanner } from 'react-icons/io'
 import { FaExclamationTriangle } from 'react-icons/fa'
 import styles from './video.css'
 
-class Video extends Component {
+class ReactVideoPlayer extends Component {
 
   constructor() {
 
@@ -37,7 +37,8 @@ class Video extends Component {
     }
 
     this._video = React.createRef()
-    this._button = React.createRef()  
+    this._videoSeekbarComponent = React.createRef()
+    this._button = React.createRef()
     this._progressBar = React.createRef()
     this._videoContainer = React.createRef()
 
@@ -418,6 +419,13 @@ class Video extends Component {
           document.msExitFullscreen();
         }
       }
+
+      setTimeout(() => {
+
+        this.timeupdate()
+
+      }, 100)
+              
     } else {
 
       if (!this.state.iphoneFullscreen) {
@@ -535,6 +543,7 @@ class Video extends Component {
                   <div className={styles.videoTime}>{this.state.currentVideoTime !== null ? this.state.currentVideoTime : '--:--'}</div>
 
                   <VideoSeekbar
+                    ref={this._videoSeekbarComponent}
                     loading={this.state.loading}
                     hide={this.state.hide}
                     videoref={this._video}
@@ -559,11 +568,11 @@ class Video extends Component {
   }
 }
 
-Video.propTypes = {
+ReactVideoPlayer.propTypes = {
   className:PropTypes.string.isRequired,
   videoPath:PropTypes.string.isRequired,
   videoThumbnail:PropTypes.string.isRequired,
   isMobile:PropTypes.bool.isRequired
 };
 
-export default Video
+export default ReactVideoPlayer

@@ -111,7 +111,7 @@
   border-radius: 5px;
   padding: 5px 10px 5px 10px;
   position: absolute;
-  z-index: 999;
+  z-index: 998;
   top: 15px;
   right: 15px;
   min-width: 50px;
@@ -156,7 +156,7 @@
   border-radius: 5px;
   padding: 5px 10px 5px 10px;
   position: absolute;
-  z-index: 999;
+  z-index: 998;
   top: 15px;
   left: 15px;
   display: flex;
