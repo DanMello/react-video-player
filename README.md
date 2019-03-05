@@ -1,6 +1,8 @@
-# React-Video-Player
+# React-Video-Player 
 
-A React component for playing videos with controls.
+[![npm version](https://badge.fury.io/js/react-vp.svg)](//npmjs.com/package/react-vp)
+
+A React component for playing videos with controls. 
 
 ### Requirements
 1. React and React-dom 16.5.2 or greater
@@ -46,3 +48,4 @@ Prop | Description | Required
 `videoPath` | Path to the video you want to play. | yes
 `videoThumbnail` | Path to the video thumbnail. | yes
 `isMobile` | This is a bool, how you determine if the user is on desktop or mobile is up to you or you can put false if its only for desktop. | yes
+
