@@ -8,6 +8,7 @@
     "react-dom": "^16.5.2"
   },
   "dependencies": {
+    "prop-types": "^15.7.2",
     "react-icons": "^3.4.0"
   },
   "scripts": {

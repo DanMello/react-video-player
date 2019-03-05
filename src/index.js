@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types/prop-types';
 import ToggleVideo from './ToggleVideo'
 import VideoSeekbar from './VideoSeekbar'
 import VideoAudio from './VideoAudio'
 import Loader from './helpers/myloader'
 import { timeConvert } from './helpers/numbers'
 import { IoMdQrScanner } from 'react-icons/io'
-
+import { FaExclamationTriangle } from 'react-icons/fa'
 import styles from './video.css'
 
 class Video extends Component {
@@ -61,6 +62,7 @@ class Video extends Component {
     this.toggleFullScreen = this.toggleFullScreen.bind(this)
     this.changedFullscreenIOS = this.changedFullscreenIOS.bind(this)
     this.ended = this.ended.bind(this)
+    this.reloadPage = this.reloadPage.bind(this)
   }
 
   componentDidMount() {
@@ -451,15 +453,28 @@ class Video extends Component {
     })
   }
 
+  reloadPage() {
+
+    window.location.reload()
+  }
+
   render() {
 
     return (
-      <div style={{position: 'relative'}}>
+      <div style={{position: 'relative'}} className={!this.props.isMobile ? this.props.className : this.props.mobileClassName}>
 
           {this.state.error ?
 
-            <div className={styles.videoErrorContainer}>
-              <h1 className={styles.videoErrormessage}>Something went wrong loading your video please try again</h1>
+            <div className={styles.videoErrorContainer} onClick={this.props.isMobile ? this.reloadPage : null}>
+              <div className={styles.videoErrorPosition}>
+                <div className={styles.videoErrorSubContainer}>
+                  <FaExclamationTriangle className={styles.videoErrorIcon} />
+                  <h1 className={styles.videoErrormessage}>Video not available.</h1>
+                </div>
+                <div className={!this.props.isMobile ? styles.videoRetryButton : styles.videoRetryButtonMobile} onClick={!this.props.isMobile ? this.reloadPage : null}>
+                  {this.props.isMobile ? 'Tap to refresh' : 'Click to refresh'}
+                </div>
+              </div>
             </div>
             :
             <div
@@ -543,5 +558,12 @@ class Video extends Component {
     )
   }
 }
+
+Video.propTypes = {
+  className:PropTypes.string.isRequired,
+  videoPath:PropTypes.string.isRequired,
+  videoThumbnail:PropTypes.string.isRequired,
+  isMobile:PropTypes.bool.isRequired
+};
 
 export default Video

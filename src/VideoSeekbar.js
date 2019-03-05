@@ -40,8 +40,6 @@ class VideoSeekbar extends Component {
 
       while (seekbarParent.tagName !== 'BODY') {
 
-        console.log(seekbarParent.offsetLeft, seekbarParent.parentElement)
-
         offset += seekbarParent.offsetLeft
         seekbarParent = seekbarParent.parentElement
       }
@@ -164,8 +162,6 @@ class VideoSeekbar extends Component {
   }
 
   seekToPosition(e) {
-
-    console.log(e.pageX, this.state.offset)
 
     const progressbarwidth = this.props.progressbar.current.offsetWidth
 

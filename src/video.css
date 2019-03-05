@@ -171,15 +171,47 @@
 }
 
 .videoErrorContainer {
-  padding: 10px;
+  position: relative;
+  padding-bottom: 56.25%;
+  background: #F0F3F4;
+}
+
+.videoErrorPosition {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.videoErrorSubContainer {
+  display: flex;
+  align-items: center;
+}
+
+.videoErrorIcon {
+  color: #444;
+}
+
+.videoRetryButton{
+  color: blue;
+  cursor: pointer;
+}
+
+.videoRetryButtonMobile {
+  font-weight: bold;
+  color: #444;
 }
 
 .videoErrormessage {
   text-align: center;
   font-size: 1em;
+  color: #444;
+  padding-left: 5px; 
 }
 
 .videoLoaderCircle {
