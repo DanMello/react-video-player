@@ -1,12 +1,6 @@
 # React-Video-Player 
 
-<<<<<<< HEAD
 A React component for easily playing videos with controls on mobile and desktop devices.
-=======
-[![npm version](https://badge.fury.io/js/react-vp.svg)](//npmjs.com/package/react-vp)
-
-A React component for playing videos with controls. 
->>>>>>> 552bcce685b1293b3ec8599ae0585880d4965c0e
 
 ### Requirements
 1. React and React-dom 16.5.2 or greater
