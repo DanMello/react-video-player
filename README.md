@@ -14,6 +14,15 @@ body {
   margin: 0;
 }
 ```
+3. If you wrap the ReactVideoPlayer component with another component that has a set width, the seekbar and volume slider may not work properly. To fix put postion relative on the component wrapping ReactVideoPlayer.
+
+Example:
+```css
+.video-container {
+  width 400px
+  position: relative;
+}
+```
 
 ### Usage
 
@@ -37,7 +46,7 @@ class App extends Component {
   }
 }
 ```
-Demo page: [`https://mellocloud.com`](https://mellocloud.com)
+Demo page: [`https://mellocloud.com/react-video-player`](https://mellocloud.com/react-video-player)
 
 ### Props
 
@@ -48,4 +57,3 @@ Prop | Description | Required
 `videoPath` | Path to the video you want to play. | yes
 `videoThumbnail` | Path to the video thumbnail. | yes
 `isMobile` | This is a bool, how you determine if the user is on desktop or mobile is up to you or you can put false if its only for desktop. | yes
-
