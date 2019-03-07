@@ -146,8 +146,6 @@ class VideoSeekbar extends Component {
 
   seekToPosition(e) {
 
-    console.log('seek to position', ' e.pageX: ', e.pageX, 'offset:', this.state.offset)
-
     const progressbarwidth = this.props.progressbar.current.offsetWidth
 
     let position = e.pageX - this.state.offset
