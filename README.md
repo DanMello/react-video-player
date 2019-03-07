@@ -19,7 +19,7 @@ body {
 Example:
 ```css
 .video-container {
-  width 400px
+  width 400px;
   position: relative;
 }
 ```
