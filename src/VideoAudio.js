@@ -38,26 +38,8 @@ class VideoAudio extends Component {
 
     if (!this.props.isMobile) {
 
-      let seekbarParent = ReactDOM.findDOMNode(this.audioSlider.current)
-      let offset = 0
-
-      //the container for the video player must have position relative
-      if (document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
-
-        while (!seekbarParent.classList.contains(styles.videoPlayerOuterContainer)) {
-
-          offset += seekbarParent.offsetLeft
-          seekbarParent = seekbarParent.parentElement
-        }
-        
-      } else {
-
-        while (seekbarParent.tagName !== 'BODY') {
-
-          offset += seekbarParent.offsetLeft
-          seekbarParent = seekbarParent.parentElement
-        }
-      }
+      let slider = ReactDOM.findDOMNode(this.audioSlider.current)
+      let offset = slider.getBoundingClientRect().left
 
       if (offset !== this.state.offset) {
 

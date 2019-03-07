@@ -7,23 +7,6 @@ A React component for easily playing videos with controls on mobile and desktop 
 ### Requirements
 1. React and React-dom 16.5.2 or greater
 
-2. The body must have margin and padding 0 for the offsetLeft position to be correct in the video seekbar and volume slider.
-```css
-body {
-  padding: 0;
-  margin: 0;
-}
-```
-3. If you wrap the ReactVideoPlayer component with another component that has a set width, the seekbar and volume slider may not work properly. To fix put postion relative on the component wrapping ReactVideoPlayer.
-
-Example:
-```css
-.video-container {
-  width 400px;
-  position: relative;
-}
-```
-
 ### Usage
 
 ```bash
