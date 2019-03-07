@@ -1,6 +1,12 @@
-# React-Video-Player
+# React-Video-Player 
 
+<<<<<<< HEAD
 A React component for easily playing videos with controls on mobile and desktop devices.
+=======
+[![npm version](https://badge.fury.io/js/react-vp.svg)](//npmjs.com/package/react-vp)
+
+A React component for playing videos with controls. 
+>>>>>>> 552bcce685b1293b3ec8599ae0585880d4965c0e
 
 ### Requirements
 1. React and React-dom 16.5.2 or greater
@@ -10,6 +16,15 @@ A React component for easily playing videos with controls on mobile and desktop 
 body {
   padding: 0;
   margin: 0;
+}
+```
+3. If you wrap the ReactVideoPlayer component with another component that has a set width, the seekbar and volume slider may not work properly. To fix put postion relative on the component wrapping ReactVideoPlayer.
+
+Example:
+```css
+.video-container {
+  width 400px;
+  position: relative;
 }
 ```
 
@@ -35,7 +50,7 @@ class App extends Component {
   }
 }
 ```
-Demo page: [`https://mellocloud.com`](https://mellocloud.com)
+Demo page: [`https://mellocloud.com/react-video-player`](https://mellocloud.com/react-video-player)
 
 ### Props
 
