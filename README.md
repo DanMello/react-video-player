@@ -1,6 +1,6 @@
 # React-Video-Player
 
-A React component for playing videos with controls.
+A React component for easily playing videos with controls on mobile and desktop devices.
 
 ### Requirements
 1. React and React-dom 16.5.2 or greater
