@@ -468,7 +468,7 @@ class ReactVideoPlayer extends Component {
   render() {
 
     return (
-      <div style={{position: 'relative'}} className={!this.props.isMobile ? this.props.className : this.props.mobileClassName}>
+      <div className={!this.props.isMobile ? this.props.className : this.props.mobileClassName}>
 
           {this.state.error ?
 
@@ -568,7 +568,6 @@ class ReactVideoPlayer extends Component {
 }
 
 ReactVideoPlayer.propTypes = {
-  className:PropTypes.string.isRequired,
   videoPath:PropTypes.string.isRequired,
   videoThumbnail:PropTypes.string.isRequired,
   isMobile:PropTypes.bool.isRequired

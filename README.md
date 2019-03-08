@@ -43,7 +43,7 @@ Demo page: [`https://mellocloud.com/react-video-player`](https://mellocloud.com/
 
 Prop | Description | Required
 ---- | ----------- | -------
-`className` | Css class for the video container, this will be applied to the desktop version of the video player. | yes
+`className` | Css class for the video container, this will be applied to the desktop version of the video player. | no
 `mobileClassName` | Css class for the video container, this will be applied to the mobile version of the video player. | no
 `videoPath` | Path to the video you want to play. | yes
 `videoThumbnail` | Path to the video thumbnail. | yes
