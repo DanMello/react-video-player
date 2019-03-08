@@ -16,7 +16,7 @@
     "start": "webpack-dev-server --open --hot --mode=development --env.development",
     "build": "webpack --mode=production --env.production"
   },
-  "keywords": ["react-video-player", "react-player", "video", "player", "react"],
+  "keywords": ["react-video-player", "react-player", "video", "player", "react", "customizable", "custom"],
   "author": {
     "name": "Dan Mello",
     "email": "jdanmello@gmail.com"

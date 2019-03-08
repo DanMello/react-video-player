@@ -49,3 +49,6 @@ Prop | Description | Required
 `videoThumbnail` | Path to the video thumbnail. | yes
 `isMobile` | This is a bool, how you determine if the user is on desktop or mobile is up to you or you can put false if its only for desktop. | yes
 `colors` | This is an object with colors so you can customize your video player to match your theme. By default its blue and grayish | no
+
+### What I Learned
+
