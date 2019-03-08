@@ -58,7 +58,7 @@ Prop | Description | Required
 let offset = seekbar.getBoundingClientRect().left //used to move the seekbar thumb.
 ```
 
-2. CSS modules, how to hash css classnames so that they don't interfere with existing CSS classes when bringing this into your project.
+2. CSS modules, how to hash CSS classnames so that they don't interfere with existing CSS classes when bringing this into your project.
 
 3. npm link, how to test npm packages before releasing them.
 

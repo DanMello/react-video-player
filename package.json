@@ -1,7 +1,7 @@
 {
   "name": "react-vp",
-  "version": "1.1.1",
-  "description": "A custom video player for react.",
+  "version": "1.2.2",
+  "description": "A React component for easily playing videos on mobile and desktop devices. Comes with video controls and customization for audio slider and video seekbar to match the theme of your website.",
   "main": "dist/main.bundle.js",
   "peerDependencies": {
     "react": "^16.5.2",
@@ -17,6 +17,10 @@
     "build": "webpack --mode=production --env.production"
   },
   "keywords": ["react-video-player", "react-player", "video", "player", "react", "customizable", "custom"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DanMello/react-video-player"
+  },
   "author": {
     "name": "Dan Mello",
     "email": "jdanmello@gmail.com"
