@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/react-vp.svg)](//npmjs.com/package/react-vp)
 
-A React component for easily playing videos with controls on mobile and desktop devices.
+A React component for easily playing videos on mobile and desktop devices. Comes with video controls and customization for audio slider and video seekbar to match the theme of your website.
 
 ### Requirements
 1. React and React-dom 16.5.2 or greater
