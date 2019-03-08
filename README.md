@@ -21,10 +21,18 @@ class App extends Component {
   render () {
     return <ReactVideoPlayer 
               className={'video-container'}
-              mobileClassName={'video-container-mobile'} 
+              mobileClassName={'video-container-mobile'}
               videoPath='assets/videos/video.mp4'
               videoThumbnail='assets/videos/thumbnail.png'
               isMobile={this.props.config.isMobile}
+              colors={{
+                audioThumb: 'rgb(0, 125, 255)',
+                audioSlider: '#ccc',
+                videoThumb: 'rgb(0, 125, 255)',
+                seekbarPlayed: 'rgb(0, 125, 255)',
+                seekbarProgress: '#ccc',
+                seekbarBackground: 'rgb(58, 61, 80)'
+              }}
               />
   }
 }
@@ -40,3 +48,4 @@ Prop | Description | Required
 `videoPath` | Path to the video you want to play. | yes
 `videoThumbnail` | Path to the video thumbnail. | yes
 `isMobile` | This is a bool, how you determine if the user is on desktop or mobile is up to you or you can put false if its only for desktop. | yes
+`colors` | This is an object with colors so you can customize your video player to match your theme. By default its blue and grayish | no

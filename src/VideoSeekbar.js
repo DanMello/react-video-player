@@ -175,12 +175,20 @@ class VideoSeekbar extends Component {
 
     return (
 
-      <div className={styles.progressBar} ref={this.props.progressbar} onClick={!this.props.isMobile ? this.seekToPosition : null}>
+      <div 
+        className={styles.progressBar}
+        ref={this.props.progressbar} 
+        onClick={!this.props.isMobile ? this.seekToPosition : null}
+        style={{
+          background: this.props.colors ? this.props.colors.seekbarBackground : null
+        }}
+        >
 
           <div
             className={styles.progressBarLoadedData}
             style={{
-              width: this.state.loadedPercentage + '%'
+              width: this.state.loadedPercentage + '%',
+              background: this.props.colors ? this.props.colors.seekbarProgress : null
             }}
           >
           </div>
@@ -188,7 +196,8 @@ class VideoSeekbar extends Component {
           <div
             className={styles.progressBarPlayedData}
             style={{
-              width: this.state.x + 'px'
+              width: this.state.x + 'px',
+              background: this.props.colors ? this.props.colors.seekbarPlayed : null
             }}
           >
           </div>
@@ -199,7 +208,8 @@ class VideoSeekbar extends Component {
             onTouchStart={this.props.isMobile ? this.startEvent : null}
             ref={this.props.button}
             style={{
-              left: this.state.x + 'px'
+              left: this.state.x + 'px',
+              background: this.props.colors ? this.props.colors.videoThumb : null
             }}
           >
             <span className={styles.progressButtonPadding}/>

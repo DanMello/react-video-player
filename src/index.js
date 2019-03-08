@@ -37,7 +37,6 @@ class ReactVideoPlayer extends Component {
     }
 
     this._video = React.createRef()
-    this._videoSeekbarComponent = React.createRef()
     this._button = React.createRef()
     this._progressBar = React.createRef()
     this._videoContainer = React.createRef()
@@ -425,7 +424,7 @@ class ReactVideoPlayer extends Component {
         this.timeupdate()
 
       }, 100)
-              
+
     } else {
 
       if (!this.state.iphoneFullscreen) {
@@ -516,7 +515,7 @@ class ReactVideoPlayer extends Component {
                   <IoMdQrScanner className={styles.videoFullscreenButton} />
                 </div>
 
-                <VideoAudio videoref={this._video} isMobile={this.props.isMobile} hide={this.state.hide} loading={this.state.loading} />
+                <VideoAudio videoref={this._video} isMobile={this.props.isMobile} hide={this.state.hide} loading={this.state.loading} colors={this.props.colors} />
 
                 <div className={styles.videoCenterControlsContainer}>
                   
@@ -543,7 +542,6 @@ class ReactVideoPlayer extends Component {
                   <div className={styles.videoTime}>{this.state.currentVideoTime !== null ? this.state.currentVideoTime : '--:--'}</div>
 
                   <VideoSeekbar
-                    ref={this._videoSeekbarComponent}
                     loading={this.state.loading}
                     hide={this.state.hide}
                     videoref={this._video}
@@ -555,6 +553,7 @@ class ReactVideoPlayer extends Component {
                     endSeekbarInteraction={this.endSeekbarInteraction}
                     loadedPercentage={this.state.loadedPercentage}
                     positionLeft={this.state.positionLeft}
+                    colors={this.props.colors}
                   />
 
                   <div className={styles.videoTime}>{this.state.videoDuration !== null ? this.state.videoDuration : '--:--'}</div>

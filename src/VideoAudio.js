@@ -158,12 +158,20 @@ class VideoAudio extends Component {
           { audio }
         </div>
         {!this.props.isMobile &&
-          <div className={styles.videoAudioVolumebarContainer} ref={this.audioSlider} onClick={this.moveEvent}>
+          <div 
+            className={styles.videoAudioVolumebarContainer}
+            ref={this.audioSlider}
+            onClick={this.moveEvent} 
+            style={{
+              background: this.props.colors ? this.props.colors.audioSlider : null
+            }}
+            >
             <div 
               className={styles.videoAudioThumb}
               onMouseDown={this.startEvent}
               style={{
-                left: thumbPosition
+                left: thumbPosition,
+                background: this.props.colors ? this.props.colors.audioThumb : null
               }}
               >
             </div>
