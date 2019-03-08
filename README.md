@@ -50,5 +50,16 @@ Prop | Description | Required
 `isMobile` | This is a bool, how you determine if the user is on desktop or mobile is up to you or you can put false if its only for desktop. | yes
 `colors` | This is an object with colors so you can customize your video player to match your theme. By default its blue and grayish | no
 
-### What I Learned
+# What I Learned
 
+1. To get the offset from a component to the left of the page you can use
+
+```js
+let offset = seekbar.getBoundingClientRect().left //used to move the seekbar thumb.
+```
+
+2. CSS modules, how to hash css classnames so that they don't interfere with existing CSS classes when bringing this into your project.
+
+3. npm link, how to test npm packages before releasing them.
+
+4. Last but not least I learned a ton about videos on the web including Media Events, Fullscreen API, and Media Source Extensions. If you are interested in learning more about video players here is a great tutorial series from Google chrome developers youtube channel https://www.youtube.com/watch?v=--KA2VrPDao&t=8s
