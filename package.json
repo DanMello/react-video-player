@@ -1,6 +1,6 @@
 {
   "name": "react-vp",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A React component for easily playing videos on mobile and desktop devices. Comes with video controls and customization for audio slider and video seekbar to match the theme of your website.",
   "main": "dist/main.bundle.js",
   "peerDependencies": {

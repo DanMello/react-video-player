@@ -9,6 +9,8 @@
   margin: 0;
   position: relative;
   display: table;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
 }
 
 .videoPlayerContainer {
